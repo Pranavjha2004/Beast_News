@@ -31,7 +31,7 @@ const Home = () => {
             if (!searchQuery && search !== '') return;
             setLoadingArticles(true);
             try {
-                const res = await axios.get('https://newsapi.org/v2/everything', {
+                const res = await axios.get('/api/search', {
                     params: {
                         q: searchQuery || 'India',
                         sortBy: 'relevancy',
@@ -56,7 +56,7 @@ const Home = () => {
         const fetchHeadlines = async () => {
             setLoadingHeadlines(true);
             try {
-                const res = await axios.get('https://newsapi.org/v2/top-headlines', {
+                const res = await axios.get('/api/news', {
                     params: {
                         country: 'in' || 'us',
                         category: 'general',
