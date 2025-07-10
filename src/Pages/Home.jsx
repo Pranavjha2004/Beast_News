@@ -58,6 +58,7 @@ const Home = () => {
             try {
                 const res = await axios.get('https://newsapi.org/v2/top-headlines', {
                     params: {
+                        country: 'in' || 'us',
                         category: 'general',
                         sortBy: 'publishedAt',
                         pageSize: 8,
