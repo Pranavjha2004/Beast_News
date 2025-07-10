@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import Cards from '../Components/Cards';
 import axios from 'axios';
 import Navbar from '../Components/NavBar';
-const ApiKey = import.meta.env.VITE_YOUR_API_KEY;
+const ApiKey = import.meta.env.VITE_NEWS_API_KEY;
 
 const Home = () => {
     const [search, setSearch] = useState('');
